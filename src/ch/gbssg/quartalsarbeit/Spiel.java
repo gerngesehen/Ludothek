@@ -5,7 +5,14 @@ public class Spiel {
 private int Lagerbestand;
 private String name;
 private eKategorien kategorie;
-private int Preis;
+private double Preis;
+
+public Spiel(int Lagerbestand, String name, eKategorien Kategorie, double Preis) {
+	this.name = name;
+	this.Lagerbestand = Lagerbestand;
+	this.kategorie = Kategorie;
+	this.Preis = Preis;
+}
 
 public int getLagerbestand() {
 	return Lagerbestand;
@@ -25,10 +32,10 @@ public eKategorien getKategorie() {
 public void setKategorie(eKategorien kategorie) {
 	this.kategorie = kategorie;
 }
-public int getPreis() {
+public double getPreis() {
 	return Preis;
 }
-public void setPreis(int preis) {
+public void setPreis(double preis) {
 	Preis = preis;
 }
 

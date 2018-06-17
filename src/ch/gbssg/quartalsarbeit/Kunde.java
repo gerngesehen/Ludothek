@@ -38,12 +38,27 @@ public class Kunde {
 	
 	public void Ausleihen(Spiel spiel)
 	{
+		int CurrentLagerbestand = spiel.getLagerbestand();
 		
+		if(CurrentLagerbestand < 0) {
+			System.out.println("Spiel nicht vorhanden");
+			return;
+		}
+		
+		CurrentLagerbestand--;
+		spiel.setLagerbestand(CurrentLagerbestand);
+		
+		System.out.println("Spiel wurde ausgelehnt und der Lagerbestand verringert");
 	}
 	
 	public void zurueckgeben(Spiel spiel)
 	{
+		int CurrentLagerbestand = spiel.getLagerbestand();
+				
+		CurrentLagerbestand++;
+		spiel.setLagerbestand(CurrentLagerbestand);
 		
+		System.out.println("Spiel wurde zurückgebracht und der Lagerbestand erhöht");
 	}
 
 	public String getVorname() {
