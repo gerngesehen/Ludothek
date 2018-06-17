@@ -6,7 +6,7 @@ public class Filiale {
 	private String Name;
 	private String Adresse;
 	private Filialleiter Filialleiter;
-	private Mitarbeiter[] MitarbeiterArray;
+	private Mitarbeiter MitarbeiterArray[];
 	static private int AnzahlMitarbeier = 0;
 
 
