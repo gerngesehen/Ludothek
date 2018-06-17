@@ -6,7 +6,7 @@ public class Filiale {
 	private String Name;
 	private String Adresse;
 	private Filialleiter Filialleiter;
-	private Mitarbeiter MitarbeiterArray[];
+	static private Mitarbeiter [] MitarbeiterArray = new Mitarbeiter[10];
 	static private int AnzahlMitarbeier = 0;
 
 
@@ -18,7 +18,7 @@ public class Filiale {
 	public void addMitarbeiter(Mitarbeiter Mitarbeiter) {
 		this.MitarbeiterArray[AnzahlMitarbeier] = Mitarbeiter;
 		AnzahlMitarbeier++;
-		System.out.println("Neuer Mitarbeiter" + Mitarbeiter.getVorname() + "eingestellt");
+		System.out.println("Neuer Mitarbeiter " + Mitarbeiter.getVorname() + " eingestellt in " + this.Name);
 	}
 	
 	public String getName() {
