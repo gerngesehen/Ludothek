@@ -14,11 +14,11 @@ public class Kunde {
 	private String Adresse;
 	private String Telefonnummer;
 	private String Email;
-	private Boolean Geschlecht;
+	private eGender Geschlecht;
 	private Boolean Mitglied;
 	
 	public Kunde(int Id, String Vorname, String Nachname, String Geburtsdatum, String Adresse, String TelefonNr,
-			String Email, boolean Geschlecht, boolean Mitglied) {
+			String Email, eGender Geschlecht, boolean Mitglied) {
 		// TODO Auto-generated constructor stub
 		this.Id = Id;
 		this.Vorname = Vorname;
@@ -94,11 +94,11 @@ public class Kunde {
 		Email = email;
 	}
 
-	public Boolean getGeschlecht() {
+	public eGender getGeschlecht() {
 		return Geschlecht;
 	}
 
-	public void setGeschlecht(Boolean geschlecht) {
+	public void setGeschlecht(eGender geschlecht) {
 		Geschlecht = geschlecht;
 	}
 

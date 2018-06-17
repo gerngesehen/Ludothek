@@ -1,15 +1,10 @@
 package ch.gbssg.quartalsarbeit;
 
-
-public enum Kategorie {
-    Unterstufe, Mittelstufe, Oberstufem, 
-}
-
 public class Spiel {
 
 private int Lagerbestand;
 private String name;
-private Kategorie kategorie;
+private eKategorien kategorie;
 private int Preis;
 
 public int getLagerbestand() {
@@ -24,10 +19,10 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public Kategorie getKategorie() {
+public eKategorien getKategorie() {
 	return kategorie;
 }
-public void setKategorie(Kategorie kategorie) {
+public void setKategorie(eKategorien kategorie) {
 	this.kategorie = kategorie;
 }
 public int getPreis() {
