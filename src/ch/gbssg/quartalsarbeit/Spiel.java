@@ -2,7 +2,7 @@ package ch.gbssg.quartalsarbeit;
 
 public class Spiel {
 
-private int Lagerbestand;
+static private int Lagerbestand;
 private String name;
 private eKategorien kategorie;
 private double Preis;

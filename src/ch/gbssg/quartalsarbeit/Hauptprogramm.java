@@ -13,12 +13,16 @@ public class Hauptprogramm {
 		//Kunde wird Mitglied
 		Sepp.setMitglied(true);
 		
-		Spiel CSGO = new Spiel(5, "CSGO", eKategorien.OBERSTUFE, 34.99);
+		Spiel CSGO = new Spiel(1, "CSGO", eKategorien.OBERSTUFE, 34.99);
 				
 		Sepp.Ausleihen(CSGO);		
-		Sepp.zurueckgeben(CSGO);
-	
+		Sepp.Ausleihen(CSGO);		
+		Sepp.zurueckgeben(CSGO);	
+			
+		Filialleiter Hans = new Filialleiter("Hans", "Lingg", "0785566369", false, false);
+		Filiale Oberriet = new Filiale(1, "Oberriet", "Staatsstrasse 12", Hans);
 		
+		Mitarbeiter Peter = new Mitarbeiter(1, "Peter", "Hallauer", "07.08.1988", "Rietliweg 4", "0792777048", "peter.hallauer@gbssg.ch", eGender.MALE);
+		Oberriet.addMitarbeiter(Peter);
 	}
-
 }
