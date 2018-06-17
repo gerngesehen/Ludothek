@@ -9,7 +9,7 @@ public class Kunde {
 	
 
 	
-	private int ID;
+	public int ID;
 	private String Vorname;
 	private String Nachname;
 	private date Geburtsdatum;
