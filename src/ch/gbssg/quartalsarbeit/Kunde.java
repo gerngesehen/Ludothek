@@ -1,5 +1,10 @@
 package ch.gbssg.quartalsarbeit;
 
+/**
+ * @author Pascal
+ *
+ */
+
 public class Kunde {
 	
 
