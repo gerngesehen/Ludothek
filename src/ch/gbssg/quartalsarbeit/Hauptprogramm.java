@@ -18,8 +18,9 @@ public class Hauptprogramm {
 		Sepp.Ausleihen(CSGO);		
 		Sepp.Ausleihen(CSGO);		
 		Sepp.zurueckgeben(CSGO);	
-			
-		Filialleiter Hans = new Filialleiter("Hans", "Lingg", "0785566369", false, false);
+		Sepp.Ausleihen(CSGO);
+		
+		Filialleiter Hans = new Filialleiter(1, "Hans", "Lingg", "04.28.1992","Musterstrasse 1","0798909876","hans.lingg@gbssg.ch", eGender.MALE, false, false);
 		Filiale Oberriet = new Filiale(1, "Oberriet", "Staatsstrasse 12", Hans);
 		
 		Mitarbeiter Peter = new Mitarbeiter(1, "Peter", "Hallauer", "07.08.1988", "Rietliweg 4", "0792777048", "peter.hallauer@gbssg.ch", eGender.MALE);
