@@ -1,7 +1,11 @@
 package ch.gbssg.quartalsarbeit;
 
 import ch.gbssg.quartalsarbeit.Kunde;
-
+/**
+ * Im Hauptprogramm befindet sich ein einfacher Ablauf, der die verschiedenen Funktionen Testet
+ * @author joelh
+ * @version 1.2
+ */
 public class Hauptprogramm {
 
 	public static void main(String[] args) {

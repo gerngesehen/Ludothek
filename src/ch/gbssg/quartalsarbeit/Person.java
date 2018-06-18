@@ -1,5 +1,11 @@
 package ch.gbssg.quartalsarbeit;
-
+/**
+ * Dies ist die Oberste Klasse für alle Klassen die mit einer Person zu tun haben. Also alle Klassen erben
+ * von dieser Klasse.
+ * @author joelh
+ * @version 1.1
+ *
+ */
 public class Person {
 	protected String Vorname;
 	protected String Nachname;
