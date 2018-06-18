@@ -80,14 +80,19 @@ public class Kunde extends Person{
 	 * Diese Methode wird aufgerufen wenn ein Spiel zurückgegeben wurde
 	 * @param spiel Das Spiel das zurückgegeben wurde
 	 */
-	public void zurueckgeben(Spiel spiel)
+	public boolean zurueckgeben(Spiel spiel)
 	{
+		if(CurrentAusgeliehen <= 0) {
+			System.out.println(this.Vorname + "hat momentan kein Spiel ausgeliehen");
+			return false;			
+		}
+		
 		int CurrentLagerbestand = spiel.getLagerbestand();
 				
 		CurrentLagerbestand++;
 		spiel.setLagerbestand(CurrentLagerbestand);
-		
 		System.out.println("Spiel " + spiel.getName() + " wurde zurückgebracht und der Lagerbestand erhöht");
+		return true;
 	}
 
 	public int getId() {

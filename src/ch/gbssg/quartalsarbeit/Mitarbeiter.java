@@ -9,6 +9,7 @@ package ch.gbssg.quartalsarbeit;
 public class Mitarbeiter extends Person {
 	
 	static private int Id;
+	private boolean Angestellt = false;
 	
 	/**
 	 * Dieser Konstruktor erstellt einen neuen Mitarbeiter mit einer ID, seinem Vornamen, Nachname, Geburtsdatum,
@@ -38,5 +39,13 @@ public class Mitarbeiter extends Person {
 	
 	public int getId() {
 		return Id;
+	}
+
+	public boolean isAngestellt() {
+		return Angestellt;
+	}
+
+	public void setAngestellt(boolean angestellt) {
+		Angestellt = angestellt;
 	}
 }

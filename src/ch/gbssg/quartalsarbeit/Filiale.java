@@ -22,6 +22,9 @@ public class Filiale {
 	 */
 	public Filiale(int ID, String Name , String Adresse,Filialleiter Filialleiter){
 		this.Filialleiter = Filialleiter;
+		this.Name = Name;
+		this.Adresse = Adresse;
+		this.Filialleiter = Filialleiter;
 		System.out.println("Neu Filiale " + Name + " in " + Adresse + " wurde angelegt");
 	}
 	
@@ -29,10 +32,19 @@ public class Filiale {
 	 * Diese Methode füngt ein neuer Mitarbeiter zur Filialie hinzu.
 	 * @param Mitarbeiter Das ist der Mitarbeiter der in dieser Filiale arbeiten soll.
 	 */
-	public void addMitarbeiter(Mitarbeiter Mitarbeiter) {
+	public boolean addMitarbeiter(Mitarbeiter Mitarbeiter) {
 		this.MitarbeiterArray[AnzahlMitarbeier] = Mitarbeiter;
+		
+		if(Mitarbeiter.isAngestellt()==true) {
+			System.out.println("Mitarbeiter " + Mitarbeiter.Vorname + " ist bereits in einer Filiale angestellt");
+			return false;
+		}
+		
+		
+		Mitarbeiter.setAngestellt(true);
 		AnzahlMitarbeier++;
 		System.out.println("Neuer Mitarbeiter " + Mitarbeiter.getVorname() + " eingestellt");
+		return true;
 	}
 	
 	public String getName() {

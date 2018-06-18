@@ -12,9 +12,7 @@ class KundeTest {
 		assertEquals(Fritz.getVorname(), "Fritz");
 		assertEquals(Fritz.getNachname(), "Leonard");
 		assertEquals(Fritz.getGeburtsdatum(), "07.08.1996");
-		assertEquals(Fritz.getVorname(), "Fritz");
-		assertEquals(Fritz.getVorname(), "Fritz");
-		assertEquals(Fritz.getVorname(), "Fritz");
+		assertEquals(Fritz.getAdresse(), "Schwammstrasse 5");
 	}
 	
 	void TestAusleihen() {
@@ -34,6 +32,22 @@ class KundeTest {
 		Kevin.Ausleihen(bierpong);
 		output = Kevin.Ausleihen(bierpong);
 		assertEquals(output, false);
+	}
+	
+	void TestAusleihe() {
+		Spiel hosaaba = new Spiel(4, "hosaaba", eKategorien.OBERSTUFE, 32.50);
+		Kunde Ueli = new Kunde(1, "Ueli", "Leonard", "07.08.1996", "Schwammstrasse 5", "0792787048", "Ueli.leonard@gbssg.ch", eGender.MALE, false);
+		
+		boolean output = Ueli.zurueckgeben(hosaaba);
+		assertEquals(output, false);
+	}
+	
+	void TestMitgliedWerden() {
+		Kunde Firdolin = new Kunde(1, "Firdolin", "Leonard", "07.08.1996", "Schwammstrasse 5", "0792787048", "Firdolin.leonard@gbssg.ch", eGender.MALE, false);
+		Firdolin.setMitglied(true);
+		
+		boolean output = Firdolin.getMitglied();
+		assertEquals(output, true);
 	}
 
 }
