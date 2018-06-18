@@ -32,7 +32,7 @@ public class Filiale {
 	public void addMitarbeiter(Mitarbeiter Mitarbeiter) {
 		this.MitarbeiterArray[AnzahlMitarbeier] = Mitarbeiter;
 		AnzahlMitarbeier++;
-		System.out.println("Neuer Mitarbeiter " + Mitarbeiter.getVorname() + " eingestellt in " + this.Name);
+		System.out.println("Neuer Mitarbeiter " + Mitarbeiter.getVorname() + " eingestellt");
 	}
 	
 	public String getName() {

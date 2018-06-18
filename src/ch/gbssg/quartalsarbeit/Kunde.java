@@ -9,6 +9,7 @@ package ch.gbssg.quartalsarbeit;
 public class Kunde extends Person{
 	
 	private int Id;
+	private int CurrentAusgeliehen = 0;
 
 	private Boolean Mitglied;
 	
@@ -41,8 +42,9 @@ public class Kunde extends Person{
 	/**
 	 * Diese Methode wird aufgerufen wenn ein Kunde ein Spiel ausleihen möchte.
 	 * @param spiel Das Spiel das Ausgeliehen werden soll
+	 * @return true wenn das Spiel erfolgreich ausgelehnt wurde und false falls es fehlgeschlagen ist
 	 */
-	public void Ausleihen(Spiel spiel)
+	public boolean Ausleihen(Spiel spiel)
 	{
 		int CurrentLagerbestand = spiel.getLagerbestand();
 		
@@ -51,7 +53,7 @@ public class Kunde extends Person{
 		 */
 		if(CurrentLagerbestand <= 0) {
 			System.out.println("Spiel " + spiel.getName() +" nicht vorhanden");
-			return;
+			return false;
 		}
 		
 		/**
@@ -61,10 +63,17 @@ public class Kunde extends Person{
 			System.out.println("Mitgliederrabatt wird dem Kunden" + this.Vorname + "gutgeschrieben");
 		}
 		
+		if(this.CurrentAusgeliehen >= 3) {
+			System.out.println("Schon mehr als 3 Spiele ausgeliehen");
+			return false;
+		}
+		
 		CurrentLagerbestand--;
+		CurrentAusgeliehen++;
 		spiel.setLagerbestand(CurrentLagerbestand);
 		
 		System.out.println("Spiel " + spiel.getName() + " wurde ausgelehnt und der Lagerbestand verringert");
+		return true;
 	}
 	
 	/**
